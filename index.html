@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <title>Translator Project</title>
+  </head>
+  <body>
+    <div class="bg-slate-700 w-full h-screen flex justify-center items-center">
+      <div class="bg-black text-white font-bold rounded sm:p-4">
+        <div
+          class="sm:text-4xl bg-slate-700 sm:p-2 m-2 sm:m-8 rounded text-center"
+        >
+          <h1>Translator App</h1>
+        </div>
+
+        <!-- input & output div's -->
+        <div
+          class="sm:m-4 flex flex-col sm:flex-row justify-between items-center sm:gap-4"
+        >
+          <div>
+            <textarea
+              id="inputText"
+              class="bg-slate-700 border-white border rounded sm:max-h-full max-h-36 max-w-36 sm:max-w-full"
+              rows="10"
+              cols="20"
+              autofocus
+            ></textarea>
+          </div>
+          <div>
+            <textarea
+              id="outputText"
+              class="bg-slate-900 border-white border rounded sm:max-h-full max-h-36 max-w-36 sm:max-w-full"
+              rows="10"
+              cols="20"
+              disabled
+            ></textarea>
+          </div>
+        </div>
+        <!-- select -->
+        <div class="m-2 sm:m-4 flex justify-evenly items-center gap-4">
+          <div>
+            <select
+              id="inputLang"
+              class="bg-slate-800 rounded p-2 border border-slate-500 sm:min-w-32 font-normal"
+            >
+              <option value="English" selected>English</option>
+            </select>
+          </div>
+          <div>
+            <select
+              id="outputLang"
+              class="bg-slate-800 rounded p-2 border border-slate-500 sm:min-w-32 font-normal"
+            >
+              <option value="Arabic" selected>Arabic</option>
+            </select>
+          </div>
+        </div>
+        <!-- translate btn -->
+        <div class="text-center">
+          <button
+            id="btn"
+            class="sm:px-6 sm:py-3 mb- text-blue-600 text-lg border border-blue-400 rounded hover:text-white hover:bg-blue-700 transition-all"
+          >
+            translate
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="./data.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
